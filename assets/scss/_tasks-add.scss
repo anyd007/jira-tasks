@@ -1,0 +1,84 @@
+.add-container {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+
+    &__item {
+        border: none;
+        border-bottom: 1px solid #000;
+        text-align: center;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .url-input {
+        position: relative;
+
+        &::placeholder {
+            position: absolute;
+            font-size: 2rem;
+            transition: all 0.3s ease-in-out;
+            right: 20%;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #000;
+        }
+
+        &:is(:hover, :focus)::placeholder {
+            right: 0%;
+            font-size: 0.8rem;
+            top: 20%;
+
+        }
+    }
+
+    &__btn {
+      grid-area: 2 / 1 / 2 / 3 ;
+      padding: 10px 40px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    &__warr{
+        visibility: hidden;
+        color: tomato;
+        grid-area: 3 / 1 / 3 / 4;
+
+        &.open{
+            visibility: visible;
+        }
+        
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .add-container {
+       grid-template-columns: 1fr;
+
+       &__btn{
+        grid-area: 3 / 1 / 3 / 2;
+       }
+
+       &__warr{
+        grid-area: 4 / 1 / 4 / 2;
+       }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .add-container {
+        .url-input {
+
+            &::placeholder {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

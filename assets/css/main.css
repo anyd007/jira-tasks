@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap");
+.header {
+  text-align: center;
+  margin: 30px auto;
+}
+
+@media screen and (max-width: 992px) {
+  .header__title {
+    font-size: 2.5rem;
+  }
+}
+.add-container {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+}
+.add-container__item {
+  border: none;
+  border-bottom: 1px solid #000;
+  text-align: center;
+}
+.add-container__item:focus {
+  outline: none;
+}
+.add-container .url-input {
+  position: relative;
+}
+.add-container .url-input::-moz-placeholder {
+  position: absolute;
+  font-size: 2rem;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+}
+.add-container .url-input::placeholder {
+  position: absolute;
+  font-size: 2rem;
+  transition: all 0.3s ease-in-out;
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+}
+.add-container .url-input:is(:hover, :focus)::-moz-placeholder {
+  right: 0%;
+  font-size: 0.8rem;
+  top: 20%;
+}
+.add-container .url-input:is(:hover, :focus)::placeholder {
+  right: 0%;
+  font-size: 0.8rem;
+  top: 20%;
+}
+.add-container__btn {
+  grid-area: 2/1/2/3;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.add-container__warr {
+  visibility: hidden;
+  color: tomato;
+  grid-area: 3/1/3/4;
+}
+.add-container__warr.open {
+  visibility: visible;
+}
+
+@media screen and (max-width: 720px) {
+  .add-container {
+    grid-template-columns: 1fr;
+  }
+  .add-container__btn {
+    grid-area: 3/1/3/2;
+  }
+  .add-container__warr {
+    grid-area: 4/1/4/2;
+  }
+}
+@media screen and (max-width: 992px) {
+  .add-container .url-input::-moz-placeholder {
+    font-size: 1.5rem;
+  }
+  .add-container .url-input::placeholder {
+    font-size: 1.5rem;
+  }
+}
+.tasks-container {
+  width: 100%;
+}
+.tasks-container__items {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+.tasks-container__items h2 {
+  text-transform: uppercase;
+}
+.tasks-container__items--elemet {
+  border-bottom: 1px solid #000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Bruno Ace", cursive;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+input, label {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 992px) {
+  input, label {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=main.css.map */

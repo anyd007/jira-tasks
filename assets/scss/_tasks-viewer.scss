@@ -1,0 +1,20 @@
+
+.tasks-container{
+    width: 100%;
+
+    &__items{
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        justify-items: center;
+
+        h2{
+            text-transform: uppercase;
+        }
+
+        &--elemet{
+            border-bottom: 1px solid #000;
+        }
+    }
+}
